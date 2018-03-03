@@ -9,3 +9,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: bootstrap, st.antonys
 Text Domain: school_new
 */
+
+body 
+{
+ padding: 0px;
+ margin: 0px;
+}
