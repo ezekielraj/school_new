@@ -12,11 +12,18 @@ if ( ! function_exists( 'school_new_setup' ) ) :
 
 function school_new_setup() {
 
-add_theme_support( 'custom-logo', array(
-                'height'      => 248,
-                'width'       => 248,
-                'flex-height' => true,
+     add_theme_support( 'custom-logo', 
+        array(
+        'height'      => 100,
+        'width'       => 100,
+        'flex-height' => true,
+        'flex-width'  => true,
         ) );
+
+        register_nav_menus( array(
+                'primary' => __( 'Primary Menu', 'school_new' ),
+        ) );
+
 
 }
 endif;

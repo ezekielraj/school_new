@@ -21,22 +21,78 @@
 
 <div id="header">
 
-<?php 
+  <div class="overlay1">
 
-school_new_the_custom_logo(); 
+    <div class="overlay11">
 
+      <div id="sn_logo">
+        <?php 
 
-if ( is_front_page() && is_home() ) : ?>
-      <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-<?php else : ?>
-      <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-<?php endif;
+          school_new_the_custom_logo(); 
 
-$description = get_bloginfo( 'description', 'display' );
-if ( $description || is_customize_preview() ) : ?>
-<p class="site-description"><?php echo $description; ?></p>
-<?php endif;
+        ?> 
+      </div>
 
-?>
+    </div>
+
+    <div class="overlay12">
+
+      <div id="sn_title">
+        <?php
+
+        if ( is_front_page() && is_home() ) : ?>
+                <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+        <?php else : ?>
+                <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+        <?php endif;
+        ?>
+      </div>
+
+      <div id="sn_description">
+        <?php
+        $description = get_bloginfo( 'description', 'display' );
+        if ( $description || is_customize_preview() ) : ?>
+        <p class="site-description"><?php echo $description; ?></p>
+        <?php endif;
+
+        ?>
+      </div>
+
+    </div>
+
+    <div class="overlay13">
+        <?php if ( has_nav_menu( 'primary' ) ) : ?>
+             <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'twentysixteen' ); ?>">
+                <?php
+                  wp_nav_menu( array(
+                      'theme_location' => 'primary',
+                       'menu_class'     => 'primary-menu',
+                      ) );
+                ?>
+            </nav><!-- .main-navigation -->
+        <?php endif; ?>
+
+    </div>
+
+  </div>
+
 </div>
+
+  <div class="overlay2"> 
+                  <div id="menu-header"> Menu </div>
+
+        <?php if ( has_nav_menu( 'primary' ) ) : ?>
+                <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'twentysixteen' ); ?>">
+                    <?php
+                      wp_nav_menu( array(
+                          'theme_location' => 'primary',
+                          'menu_class'     => 'primary-menu',
+                          ) );
+                    ?>
+                </nav><!-- .main-navigation -->
+            <?php endif; ?>
+    
+  
+  </div>
+
 
