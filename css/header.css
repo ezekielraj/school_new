@@ -145,6 +145,12 @@
     float: right;
     cursor: pointer;
     color: #ffffff;
+    margin: 15px;
+}
+
+#menu-header::after
+{
+    content: " ▼";
 }
 
 .sub-menu {

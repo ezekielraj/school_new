@@ -7,5 +7,5 @@ $(document).ready(function(){
     $('.menu-item-has-children').click(function(){
         $(this).find('.sub-menu').toggle('normal');
     });
-
+    
 });
