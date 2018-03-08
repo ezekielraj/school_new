@@ -13,7 +13,7 @@ home.php
 
 
 
-
+same  as index.php
 
 
 
