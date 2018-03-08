@@ -8,10 +8,7 @@ this is the front page
 
 
 
-
-
-
-
+front-page.php
 
 
 

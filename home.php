@@ -6,7 +6,7 @@ The home page template, which is the front page by default. If you use a static 
 */
 get_header(); ?>
 this is the page to show all posts
-
+home.php
 
 
 
