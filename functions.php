@@ -25,6 +25,10 @@ function school_new_setup() {
         ) );
 
 
+                add_theme_support( 'post-thumbnails' );
+                set_post_thumbnail_size( 604, 270 );
+                add_image_size( 'school_new-full-width', 1038, 576, true );
+
 }
 endif;
 add_action( 'after_setup_theme', 'school_new_setup' );
@@ -181,3 +185,131 @@ function school_new_categorized_blog() {
 		return false;
 	}
 }
+
+
+
+if ( ! function_exists( 'school_new_posts_navigation' ) ) :
+/**
+ * Display navigation to next/previous set of posts when applicable.
+ *
+ * @todo Remove this function when WordPress 4.3 is released.
+ */
+function school_new_posts_navigation() {
+        // Don't print empty markup if there's only one page.
+        if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
+                return;
+        }
+        ?>
+        <nav class="navigation posts-navigation" role="navigation">
+                <h2 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'school_new' ); ?></h2>
+                <div class="nav-links">
+
+                        <div class="row">
+                                <?php if ( get_previous_posts_link() ) { ?>
+                                <div class="col-md-6 next-post">
+                                <?php previous_posts_link('<i class="fa fa-angle-double-left"></i>
+'. __( 'NEWER POSTS', 'school_new' ) ); ?>
+                                </div>
+                                <?php } else {
+                                        echo '<div class="col-md-6">';
+                                        echo '<p> </p>';
+                                        echo '</div>';
+                                } ?>
+
+                                <?php if ( get_next_posts_link() ) { ?>
+                                <div class="col-md-6 prev-post">
+                                <?php next_posts_link( __( 'OLDER POST', 'school_new' ).'<i class="fa fa-angle-double-right"></i>' ); ?>
+                                </div>
+                                <?php } else{
+                                        echo '<div class="col-md-6">';
+                                        echo '<p> </p>';
+                                        echo '</div>';
+                                } ?>
+                                </div>
+                </div><!-- .nav-links -->
+        </nav><!-- .navigation -->
+        <?php
+}
+endif;
+
+if ( ! function_exists( 'school_new_entry_footer' ) ) :
+/**
+ * Prints HTML with meta information for the categories, tags and comments.
+ */
+function school_new_entry_footer() {
+
+        if(is_single())
+                echo '<hr>';
+
+        if(!is_home() && !is_search() && !is_archive()){
+
+                        if ( 'post' == get_post_type() ) {
+                                /* translators: used between list items, there is a space after the comma */
+                                $categories_list = get_the_category_list( esc_html__( ', ', 'school_new' ) );
+                                echo '<div class="row">';
+                                if ( $categories_list && school_new_categorized_blog() ) {
+                                        printf( '<div class="col-md-6 cattegories"><span class="cat-links"><i class="fa fa-folder-open"></i>
+                 ' . esc_html__( '%1$s', 'school_new' ) . '</span></div>', $categories_list ); // WPCS: XSS OK.
+                                }
+                                else{
+                                        echo '<div class="col-md-6 cattegories"><span class="cat-links"><i class="fa fa-folder-open"></i></span></div>';
+                                }
+
+
+                                $tags_list = get_the_tag_list( '', esc_html__( ', ', 'school_new' ) );
+                                if ( $tags_list ) {
+                                        printf( '<div class="col-md-6 tags"><span class="tags-links"><i class="fa fa-tags"></i>' . esc_html__( ' %1$s', 'school_new' ) . '</span></div>', $tags_list ); // WPCS: XSS OK.
+                                }
+
+                                echo '</div>';
+                        }
+        }
+
+        edit_post_link( esc_html__( 'Edit This Post', 'school_new' ), '<br><span>', '</span>' );
+
+}
+endif;
+
+if ( ! function_exists( 'school_new_posted_on' ) ) :
+/**
+ * Prints HTML with meta information for the current post-date/time and author.
+ */
+function school_new_posted_on() {
+
+$viewbyauthor_text = __( 'View all posts by', 'school_new' ).' %s';
+
+$entry_meta = '<i class="fa fa-calendar-o"></i> <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s </time></a><span class="byline"><span class="sep"></span><i class="fa fa-user"></i>
+<span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>';
+
+        $entry_meta = sprintf($entry_meta,
+                esc_url( get_permalink() ),
+        esc_attr( get_the_time() ),
+        esc_attr( get_the_date( 'c' ) ),
+        esc_html( get_the_date() ),
+        esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+        esc_attr( sprintf( $viewbyauthor_text, get_the_author() ) ),
+        esc_html( get_the_author() ));
+
+    print $entry_meta;
+
+        if(comments_open()){
+                printf(' <i class="fa fa-comments-o"></i><span class="screen-reader-text">%1$s </span> ',_x( 'Comments', 'Used before post author name.', 'school_new' ));
+                comments_popup_link( __('0 Comment','school_new'), __('1 comment','school_new'), __('% comments','school_new'), 'comments-link', '');
+        }
+}
+endif;
+
+function school_new_featured_image_disaplay() {
+        if ( has_post_thumbnail() && ! post_password_required() && ! is_attachment() ) {  // check if the post has a Post Thumbnail assigned to it. ?>
+        <div class="featured-image">
+                <?php if( !is_single() ) { ?>
+                <a href="<?php the_permalink(); ?>" rel="bookmark">
+            <?php }
+            the_post_thumbnail('school_new-full-width'); ?>
+            <?php if( !is_single() ) { ?>
+            </a> <?php } ?>
+        </div>
+        <?php
+    }
+}
+
