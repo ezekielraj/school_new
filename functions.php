@@ -12,6 +12,21 @@ if ( ! function_exists( 'school_new_setup' ) ) :
 
 function school_new_setup() {
 
+
+load_theme_textdomain( 'school_new' );
+
+// Add default posts and comments RSS feed links to head.
+                add_theme_support( 'automatic-feed-links' );
+
+                /*
+                 * Let WordPress manage the document title.
+                 * By adding theme support, we declare that this theme does not use a
+                 * hard-coded <title> tag in the document head, and expect WordPress to
+                 * provide it for us.
+                 */
+                add_theme_support( 'title-tag' );
+
+
      add_theme_support( 'custom-logo', 
         array(
         'height'      => 100,
@@ -28,6 +43,38 @@ function school_new_setup() {
                 add_theme_support( 'post-thumbnails' );
                 set_post_thumbnail_size( 604, 270 );
                 add_image_size( 'school_new-full-width', 1038, 576, true );
+
+        /*
+                 * Switch default core markup for search form, comment form, and comments
+                 * to output valid HTML5.
+                 */
+                add_theme_support( 'html5', array(
+                        'search-form',
+                        'comment-form',
+                        'comment-list',
+                        'gallery',
+                        'caption',
+                ) );
+                /*
+                 * Enable support for Post Formats.
+                 * See http://codex.wordpress.org/Post_Formats
+                 */
+                add_theme_support( 'post-formats', array(
+                        'aside',
+                        'image',
+                        'video',
+                        'quote',
+                        'link',
+                        'gallery',
+'status', 'audio', 'chat'
+                ) );
+
+                // Set up the WordPress core custom background feature.
+                add_theme_support( 'custom-background', apply_filters( 'school_new_custom_background_args', array(
+                        'default-color' => 'f5f5f5',
+                        'default-image' => '',
+                ) ) );
+
 
 }
 endif;
@@ -312,4 +359,44 @@ function school_new_featured_image_disaplay() {
         <?php
     }
 }
+
+function school_new_scripts() {
+        //Enqueue Styles
+#        wp_enqueue_style( 'bootstrap', get_template_directory_uri().'/css/bootstrap.css' );
+#        wp_enqueue_style( 'font-awesome', get_template_directory_uri().'/font-awesome/css/font-awesome.min.css' );
+#        wp_enqueue_style( 'school_new-style', get_stylesheet_uri() );
+        //Enqueue Scripts
+#        wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array( 'jquery' ), '', true );
+#        wp_enqueue_script( 'school_new-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '', true );
+#        wp_enqueue_script( 'school_new-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array( 'jquery' ), '', true );
+#        wp_enqueue_script( 'school_new-js', get_template_directory_uri() . '/js/school_new.js', array( 'jquery' ), '',true );
+#        wp_enqueue_script( 'html5shiv', get_template_directory_uri(). '/js/html5shiv.js', array(),'3.7.3' ,false );
+#        wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
+#        wp_localize_script( 'school_new-js', 'screenReaderText', array(
+#                'expand'   => __( 'expand child menu', 'school_new' ),
+#                'collapse' => __( 'collapse child menu', 'school_new' ),
+#        ) );
+#
+#        if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+#                wp_enqueue_script( 'comment-reply' );
+#        }
+}
+add_action( 'wp_enqueue_scripts', 'school_new_scripts' );
+
+
+/**
+ * Change Read More link.
+ */
+function school_new_new_excerpt_more( $more ) {
+        return '...<p class="read-more"><a class="btn btn-default" href="'. esc_url( get_permalink( get_the_ID() ) ) . '">' . __( ' Read More', 'school_new' ) . '<span class="screen-reader-text"> '. __( ' Read More', 'school_new' ).'</span></a></p>';
+}
+add_filter( 'excerpt_more', 'school_new_new_excerpt_more' );
+
+/**
+ * Change excerpt length to 80 characters.
+ */
+function custom_excerpt_length( $length ) {
+        return 80;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
