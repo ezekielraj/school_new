@@ -13,6 +13,7 @@
  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css" />
  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/header.css" type="text/css" />
  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/footer.css" type="text/css" />
+ <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/front-page.css" type="text/css" />
  <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/jquery-3.3.1.min.js'></script>
 
 

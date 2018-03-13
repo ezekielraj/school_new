@@ -84,8 +84,8 @@ function school_custom_header_setup() {
 
 	add_theme_support( 'custom-header', apply_filters( 'school_custom_header_args', array(
 		//'default-text-color'     => $default_text_color,
-		'width'                  => 1300,
-		'height'                 => 980,
+		'width'                  => 1583,
+		'height'                 => 735,
 	//	'wp-head-callback'       => 'school_header_style',
 	) ) );
 }
@@ -400,3 +400,60 @@ function custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+function school_new_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'home page Widget Area 1', 'school_new' ),
+		'id'            => 'sidebar-1',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'school_new' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+        ) );
+        register_sidebar( array(
+		'name'          => __( 'home page Widget Area 2', 'school_new' ),
+		'id'            => 'sidebar-2',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'school_new' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+        ) );
+        register_sidebar( array(
+		'name'          => __( 'home page Widget Area 3', 'school_new' ),
+		'id'            => 'sidebar-3',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'school_new' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+        ) );
+        register_sidebar( array(
+		'name'          => __( 'home page Widget Area 4', 'school_new' ),
+		'id'            => 'sidebar-4',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'school_new' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+        ) );
+        register_sidebar( array(
+		'name'          => __( 'home page Widget Area 5', 'school_new' ),
+		'id'            => 'sidebar-5',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'school_new' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+        ) );
+        register_sidebar( array(
+		'name'          => __( 'home page Widget Area 6', 'school_new' ),
+		'id'            => 'sidebar-6',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'school_new' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'school_new_widgets_init' );
