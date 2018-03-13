@@ -3,7 +3,7 @@
 .overlay5,
 .overlay6
 {
-    width: 1100px;
+/*    width: 1100px; */
     overflow: hidden;
     margin-right: auto;
     margin-left: auto;
@@ -14,25 +14,21 @@
 .overlay4 > div 
 {
     float: left;
-    width: 33%;
 }
 
 .overlay5 > div 
 {
     float: left;
-    width: 25%;
 }
 
 .overlay6 > div:first
 {
     float: left;
-    width: 66%;
 }
 
 .overlay6 > div:second
 {
     float: left;
-    width: 33%;
 }
 
 #text_below_banner 
@@ -44,3 +40,120 @@
 {
     color :#ffffff;
 }
+
+    /* Smartphones (portrait and landscape) ----------- */
+    @media only screen and (min-device-width : 320px) and (max-device-width : 770px) {
+        /* Styles */
+        .overlay3 > div,
+        .overlay4 > div 
+        {
+            width: 100%;
+        }
+        
+        .overlay5 > div 
+        {
+            width: 100%;
+        }
+        
+        .overlay6 > div:first
+        {
+            width: 100%;
+        }
+        
+        .overlay6 > div:second
+        {
+            width: 100%;
+        }
+
+        }
+        /* iPads (portrait and landscape) ----------- */
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+        /* Styles */
+        .overlay3 > div,
+        .overlay4 > div 
+        {
+            width: 50%;
+        }
+        
+        .overlay5 > div 
+        {
+            width: 50%;
+        }
+        
+        .overlay6 > div:first
+        {
+            width: 100%;
+        }
+        
+        .overlay6 > div:second
+        {
+            width: 100%;
+        }
+
+        }
+        
+        /* Desktops and laptops ----------- */
+        @media only screen  and (min-width : 1224px) {
+        /* Styles */
+            .overlay3,
+            .overlay4,
+            .overlay5,
+            .overlay6
+            {
+                width: 1100px;
+            }
+            .overlay3 > div,
+            .overlay4 > div 
+            {
+                width: 33%;
+            }
+            
+            .overlay5 > div 
+            {
+                width: 25%;
+            }
+            
+            .overlay6 > div:first
+            {
+                width: 66%;
+            }
+            
+            .overlay6 > div:second
+            {
+                width: 33%;
+            }
+
+        }
+        
+        /* Large screens ----------- */
+        @media only screen  and (min-width : 1824px) {
+        /* Styles */
+            .overlay3,
+            .overlay4,
+            .overlay5,
+            .overlay6
+            {
+                width: 1100px;
+            }
+            .overlay3 > div,
+            .overlay4 > div 
+            {
+                width: 33%;
+            }
+            
+            .overlay5 > div 
+            {
+                width: 25%;
+            }
+            
+            .overlay6 > div:first
+            {
+                width: 66%;
+            }
+            
+            .overlay6 > div:second
+            {
+                width: 33%;
+            }
+            
+        }
