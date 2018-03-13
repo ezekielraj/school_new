@@ -455,5 +455,116 @@ function school_new_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+        register_sidebar( array(
+		'name'          => __( 'home page Widget Area 7', 'school_new' ),
+		'id'            => 'sidebar-7',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'school_new' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+        ) );
+        register_sidebar( array(
+		'name'          => __( 'home page Widget Area 8', 'school_new' ),
+		'id'            => 'sidebar-8',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'school_new' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+        ) );
+        register_sidebar( array(
+		'name'          => __( 'home page Widget Area 9', 'school_new' ),
+		'id'            => 'sidebar-9',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'school_new' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+        ) );
+        register_sidebar( array(
+		'name'          => __( 'home page Widget Area 10', 'school_new' ),
+		'id'            => 'sidebar-10',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'school_new' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+        ) );
+        register_sidebar( array(
+		'name'          => __( 'home page Widget Area 11', 'school_new' ),
+		'id'            => 'sidebar-11',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'school_new' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+        ) );
+        register_sidebar( array(
+		'name'          => __( 'home page Widget Area 12', 'school_new' ),
+		'id'            => 'sidebar-12',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'school_new' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+        register_sidebar( array(
+		'name'          => __( 'Footer Widget Area 13', 'school_new' ),
+		'id'            => 'sidebar-13',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'school_new' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+        ) );
+
+        register_sidebar( array(
+		'name'          => __( 'Footer Widget Area 14', 'school_new' ),
+		'id'            => 'sidebar-14',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'school_new' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+        ) );
+        register_sidebar( array(
+		'name'          => __( 'Footer Widget Area 15', 'school_new' ),
+		'id'            => 'sidebar-15',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'school_new' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+        ) );
+        register_sidebar( array(
+		'name'          => __( 'Footer Widget Area 16', 'school_new' ),
+		'id'            => 'sidebar-16',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'school_new' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+        ) );
+        register_sidebar( array(
+		'name'          => __( 'Footer Widget Area 17', 'school_new' ),
+		'id'            => 'sidebar-17',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'school_new' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+        ) );
+        register_sidebar( array(
+		'name'          => __( 'Front page text below banner Area 18', 'school_new' ),
+		'id'            => 'sidebar-18',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'school_new' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+        ) );
+
 }
 add_action( 'widgets_init', 'school_new_widgets_init' );

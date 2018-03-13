@@ -6,3 +6,17 @@
 {
     color: #ffffff;
 }
+
+.overlay7
+{
+    width: 1100px;
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.overlay7 > div 
+{
+    float: left;
+    width: 20%;
+}

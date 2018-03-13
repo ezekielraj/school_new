@@ -17,6 +17,17 @@ front-page.php-->
     </div>
 <?php } ?>
 </div>
+<?php if ( is_active_sidebar( 'sidebar-18' ) ) : ?>
+
+<div id="text_below_banner">
+    <div class="overlay1">
+            <p>
+                <?php dynamic_sidebar( 'sidebar-18' ); ?>
+            </p><!-- .widget-area -->
+    </div>
+</div>
+<?php endif; ?>
+
     <div class="overlay3">
 
         <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
@@ -59,6 +70,52 @@ front-page.php-->
         <?php endif; ?>
 
     </div>
+
+    <div class="overlay5">
+
+        <?php if ( is_active_sidebar( 'sidebar-7' ) ) : ?>
+            <div id="widget-area" class="widget-area" role="complementary">
+                <?php dynamic_sidebar( 'sidebar-7' ); ?>
+            </div><!-- .widget-area -->
+        <?php endif; ?>
+
+        <?php if ( is_active_sidebar( 'sidebar-8' ) ) : ?>
+            <div id="widget-area" class="widget-area" role="complementary">
+                <?php dynamic_sidebar( 'sidebar-8' ); ?>
+            </div><!-- .widget-area -->
+        <?php endif; ?>
+
+        <?php if ( is_active_sidebar( 'sidebar-9' ) ) : ?>
+            <div id="widget-area" class="widget-area" role="complementary">
+                <?php dynamic_sidebar( 'sidebar-9' ); ?>
+            </div><!-- .widget-area -->
+        <?php endif; ?>
+
+        <?php if ( is_active_sidebar( 'sidebar-10' ) ) : ?>
+            <div id="widget-area" class="widget-area" role="complementary">
+                <?php dynamic_sidebar( 'sidebar-10' ); ?>
+            </div><!-- .widget-area -->
+        <?php endif; ?>
+
+    </div>
+
+    <div class="overlay6">
+
+        <?php if ( is_active_sidebar( 'sidebar-11' ) ) : ?>
+            <div id="widget-area" class="widget-area" role="complementary">
+                <?php dynamic_sidebar( 'sidebar-11' ); ?>
+            </div><!-- .widget-area -->
+        <?php endif; ?>
+
+        <?php if ( is_active_sidebar( 'sidebar-12' ) ) : ?>
+            <div id="widget-area" class="widget-area" role="complementary">
+                <?php dynamic_sidebar( 'sidebar-12' ); ?>
+            </div><!-- .widget-area -->
+        <?php endif; ?>
+    
+    </div>    
+
+        
 
 
 <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/banner.js'></script>

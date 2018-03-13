@@ -1,5 +1,7 @@
 .overlay3,
-.overlay4
+.overlay4,
+.overlay5,
+.overlay6
 {
     width: 1100px;
     overflow: hidden;
@@ -13,4 +15,32 @@
 {
     float: left;
     width: 33%;
+}
+
+.overlay5 > div 
+{
+    float: left;
+    width: 25%;
+}
+
+.overlay6 > div:first
+{
+    float: left;
+    width: 66%;
+}
+
+.overlay6 > div:second
+{
+    float: left;
+    width: 33%;
+}
+
+#text_below_banner 
+{
+    background: #90aca2;
+}
+
+#text_below_banner p
+{
+    color :#ffffff;
 }
