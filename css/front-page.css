@@ -39,6 +39,11 @@
 #text_below_banner p
 {
     color :#ffffff;
+    font-size: 30px;
+    padding: 0px;
+    margin: 5px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
     /* Smartphones (portrait and landscape) ----------- */

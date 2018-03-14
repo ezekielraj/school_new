@@ -21,9 +21,8 @@ front-page.php-->
 
 <div id="text_below_banner">
     <div class="overlay1">
-            <p>
                 <?php dynamic_sidebar( 'sidebar-18' ); ?>
-            </p><!-- .widget-area -->
+       
     </div>
 </div>
 <?php endif; ?>
