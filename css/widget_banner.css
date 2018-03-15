@@ -1,0 +1,30 @@
+#widget_banner > div
+{
+  position: relative; 
+}
+
+#widget_banner > div > p
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+#widget_banner > div > img
+{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#widget_banner p {
+  display: block;
+  padding: 5px;
+  background-color: #000000;
+  color: #ffffff;
+}
+#widget_banner img {
+  width: 240px;
+  height: 240px;
+}
+ 
