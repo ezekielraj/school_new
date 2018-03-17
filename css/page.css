@@ -1,0 +1,40 @@
+#page-single
+{
+ margin-left: auto;
+margin-right: auto;
+padding: 20px;
+}
+#page-single p
+{
+  text-align: justify;
+}
+
+#page-single blockquote
+{
+  font-weight: italic;  
+}
+
+
+        /* Desktops and laptops ----------- */
+        @media only screen  and (min-width : 1224px) {
+        /* Styles */
+
+#page-single 
+{
+width: 1100px;
+}
+
+        }
+
+
+        @media only screen  and (min-width : 1824px) {
+        /* Styles */
+
+#page-single
+{
+width: 1100px;
+}
+
+
+        }
+

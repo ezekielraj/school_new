@@ -1,5 +1,5 @@
 
-
+<div id="footer-full">
 
 <div class="overlay7">
 
@@ -34,6 +34,7 @@
     <?php endif; ?>
 
 
+</div>
 </div>
 
 

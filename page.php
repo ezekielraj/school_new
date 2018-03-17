@@ -7,7 +7,7 @@ get_header(); ?>
 <!--page for single page-->
 
 
-
+<div id="page-single">
                 <?php
                 // Start the loop.
                 while ( have_posts() ) : the_post();
@@ -26,11 +26,12 @@ get_header(); ?>
 
 
 
+</div>
 
 
 
 
 
-
+ <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/page.css" type="text/css" />
 
 <?php get_footer(); ?>

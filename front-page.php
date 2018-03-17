@@ -115,6 +115,7 @@ front-page.php-->
     </div>    
 
         
+ <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/front-page.css" type="text/css" />
 
 
 <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/banner.js'></script>
