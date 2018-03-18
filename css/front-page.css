@@ -7,6 +7,7 @@
     overflow: hidden;
     margin-right: auto;
     margin-left: auto;
+    
 }
 
 .overlay3 > div,
@@ -44,6 +45,21 @@
     text-align: center;
     text-transform: uppercase;
 }
+
+.overlay3
+{
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+.overlay3 .widget-title
+{
+    margin: 0;
+    background-color: #90aca2;
+
+}
+
+
 
     /* Smartphones (portrait and landscape) ----------- */
     @media only screen and (min-device-width : 320px) and (max-device-width : 770px) {

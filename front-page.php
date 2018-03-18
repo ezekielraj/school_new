@@ -11,8 +11,8 @@ front-page.php-->
 <div id="image_banner">
 
 <?php $headers = get_uploaded_header_images(); ?>
-<?php foreach($headers as $header) { ?>
-    <div>
+<?php $check = 0; foreach($headers as $header) { ?>
+    <div <?php if($check > 0){ echo "style=\"display:none;\""; } $check++; ?>>
         <img class="banner_img" src="<?php echo $header['url']; ?>" />
     </div>
 <?php } ?>

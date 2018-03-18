@@ -1,0 +1,38 @@
+.overlay3 #single-post {
+    overflow: hidden;
+    height: 240px;
+    background-color: #e7e7e7;
+    padding-right: 10px;
+}
+
+.overlay3 #single-post li
+{
+    padding-top:5px;
+    padding-bottom:5px;
+    font-size: 15px;
+}
+.overlay3 #single-post ul
+{
+    position: relative;
+    top: 0px;
+}
+
+.overlay3 #sp_readmore {
+    text-align: right;
+    padding-top: 5px;
+}
+.overlay3 #sp_readmore a {
+   text-decoration: none;
+   color: #000000;
+
+}
+
+.overlay3 > div > aside
+{
+    margin: 20px;
+}
+.overlay3 > div > aside h2
+{
+    padding: 10px;
+    color: #ffffff;
+}
