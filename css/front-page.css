@@ -21,12 +21,7 @@
     float: left;
 }
 
-.overlay6 > div:first
-{
-    float: left;
-}
-
-.overlay6 > div:second
+.overlay6 > div
 {
     float: left;
 }
@@ -58,7 +53,143 @@
     background-color: #90aca2;
 
 }
+.overlay4 {
+    margin-top: 20px;
+    
+}
+.overlay4 > div h4
+{
+    font-weight: bold;
+    font-family: 'Pristina-Regular';
+    color: #6f0044;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin:0;
+}
 
+.overlay4 > div p
+{
+    color: #000000;
+    font-family: roboto-light;
+    font-size: 14px;
+    text-align: justify;
+    text-shadow: none;
+}
+
+.overlay4 > div > aside
+{
+    margin: 20px;
+}
+
+#wp-calendar{
+    width: 100%;
+}
+
+#wp-calendar caption {
+padding: 10px;
+color: #ffffff;
+text-transform: uppercase;
+font-weight: bold;
+font-size: 15px;
+background-color: #3b725e;
+}
+
+#wp-calendar {
+    background-color: #90aca2;
+    border-collapse: collapse;
+}
+
+#wp-calendar thead {
+    line-height: 2;
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 14px;
+}
+#wp-calendar tbody,
+#wp-calendar tfoot
+{
+    background-color: #ffffff;
+    line-height: 2;
+    text-align: center;
+    font-size: 14px;
+}
+#wp-calendar tbody td,
+#wp-calendar tfoot td
+{
+    border: none;
+}
+#wp-calendar tbody td a
+{
+    text-decoration: none;
+    color: #000000;
+}
+
+#wp-calendar tfoot td
+{
+    text-decoration: none;
+    color: #000000;
+}
+#wp-calendar tbody #today
+{
+    background-color: rgb(185, 178, 233);
+
+}
+
+.overlay5 h2
+{
+    margin:0;
+}
+
+.overlay5 aside
+{
+    width: 99%;
+    display:table;
+}
+
+.overlay5 aside h2
+{
+    display: table-footer-group;
+    text-align: center;
+    line-height: 1.7;
+    color: #ffffff;
+    background-color: #6f0042;
+}
+
+.overlay5 aside a
+{
+    display: table-header-group;
+}
+.overlay5 aside img
+{
+    width: 100%;
+    -webkit-transition: 0.6s ease;
+    transition: 0.6s ease;
+}
+
+.overlay5 aside:hover img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.overlay6 
+{
+    background-color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+.overlay6 aside
+{
+    margin:10px;
+}
+
+.overlay6 aside h2
+{
+    padding: 10px;
+    background-color: #4d1d71;
+    color: white;
+    text-transform: uppercase;
+}
 
 
     /* Smartphones (portrait and landscape) ----------- */
@@ -75,12 +206,12 @@
             width: 100%;
         }
         
-        .overlay6 > div:first
+        .overlay6 > div:first-child
         {
             width: 100%;
         }
         
-        .overlay6 > div:second
+        .overlay6 > div:last-child
         {
             width: 100%;
         }
@@ -100,12 +231,12 @@
             width: 50%;
         }
         
-        .overlay6 > div:first
+        .overlay6 > div:first-child
         {
             width: 100%;
         }
         
-        .overlay6 > div:second
+        .overlay6 > div:last-child
         {
             width: 100%;
         }
@@ -133,12 +264,12 @@
                 width: 25%;
             }
             
-            .overlay6 > div:first
+            .overlay6 > div:first-child
             {
                 width: 66%;
             }
             
-            .overlay6 > div:second
+            .overlay6 > div:last-child
             {
                 width: 33%;
             }
@@ -166,12 +297,12 @@
                 width: 25%;
             }
             
-            .overlay6 > div:first
+            .overlay6 > div:first-child
             {
                 width: 66%;
             }
             
-            .overlay6 > div:second
+            .overlay6 > div:last-child
             {
                 width: 33%;
             }

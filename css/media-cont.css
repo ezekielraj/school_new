@@ -1,0 +1,12 @@
+#media-cont 
+{
+    position: relative;
+    height: 270px;
+    z-index: 20;
+    overflow: hidden;
+}
+#media-cont > div
+{
+    position: absolute;
+    
+}

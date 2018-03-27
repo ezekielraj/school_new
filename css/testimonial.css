@@ -1,0 +1,33 @@
+#testimonial_post {
+    background-color: lightgrey;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+#testimonial_post > div > div
+{
+    background-color: white;
+    
+    margin-left: 80px;
+    margin-right: 20px;
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#testimonial_post > div > div > p
+{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top:0;
+    margin-bottom:0;
+    font-style:italic;
+    font-weight: normal;
+}
+
+#testimonial_post > div > p
+{
+    margin-left: 20px;
+    margin-right: 20px;
+    
+    text-align: right;
+}

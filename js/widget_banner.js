@@ -11,7 +11,10 @@ $(document).ready(function(){
         .appendTo('#widget_banner');
     },  3000);
 
-   
-    
+
+  
+
     //use setinterval for slider loop
 });
+
+
