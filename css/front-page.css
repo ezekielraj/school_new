@@ -244,14 +244,14 @@ background-color: #3b725e;
         }
         
         /* Desktops and laptops ----------- */
-        @media only screen  and (min-width : 1224px) {
+        @media only screen  and (min-width : 1024px) {
         /* Styles */
             .overlay3,
             .overlay4,
             .overlay5,
             .overlay6
             {
-                width: 1100px;
+                width: 1024px;
             }
             .overlay3 > div,
             .overlay4 > div 
@@ -277,7 +277,7 @@ background-color: #3b725e;
         }
         
         /* Large screens ----------- */
-        @media only screen  and (min-width : 1824px) {
+        @media only screen  and (min-width : 1100px) {
         /* Styles */
             .overlay3,
             .overlay4,

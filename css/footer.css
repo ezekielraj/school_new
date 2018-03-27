@@ -72,11 +72,11 @@ padding: 0;
         }
         
         /* Desktops and laptops ----------- */
-        @media only screen  and (min-width : 1224px) {
+        @media only screen  and (min-width : 1024px) {
         /* Styles */
         .overlay7
         {
-            width: 1100px;
+            width: 1024px;
         }
         .overlay7 > div,
         {
@@ -86,7 +86,7 @@ padding: 0;
         }
         
         /* Large screens ----------- */
-        @media only screen  and (min-width : 1824px) {
+        @media only screen  and (min-width : 1100px) {
         /* Styles */
             .overlay7
             {
